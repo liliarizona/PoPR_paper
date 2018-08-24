@@ -10,13 +10,13 @@ $size=$argv[2];
 
 echo "connected.\n";
 
-$h=fopen("sshsea_10.txt","w");
+$h=fopen("filename","w");
 
 
 for($i=0;$i<1001;$i++)
 {
-	$ssh = new Net_SSH2('150.135.222.167');
-	if (!$ssh->login('ece420', 'admin')) {
+	$ssh = new Net_SSH2('Servers IP');
+	if (!$ssh->login('username', 'password')) {
 		exit('Login Failed');
 	}
 	$ssh->setTimeout(20);
